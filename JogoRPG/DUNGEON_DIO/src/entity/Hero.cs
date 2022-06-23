@@ -22,7 +22,7 @@ namespace DUNGEON_DIO.src.entity
            
         }
         public virtual string Atack(){
-            return "hi";
+            return "atackk";
         }
 
         public virtual string Atack(int level){

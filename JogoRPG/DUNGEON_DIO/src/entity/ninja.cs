@@ -13,7 +13,7 @@ namespace DUNGEON_DIO.src.entity
             if(level == 0){
                 return "teste";
             }else{
-                return "é maior que 0";
+                return "raduk";
             }
             }
         

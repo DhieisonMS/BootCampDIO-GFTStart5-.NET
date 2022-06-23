@@ -9,7 +9,7 @@ namespace DUNGEON_DIO.src.entity
          this.mp = mp;
      }
      public override  string Atack(){
-         return "hello";
+         return "magia";
      }
 
     }
