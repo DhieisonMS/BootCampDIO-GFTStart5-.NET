@@ -4,9 +4,9 @@ pipeline {
         
         stage('Test on Windows') {
             steps {
-                dir('C:\\') {
-                    bat "mkdir teste"               
-                }
+                script:
+                    dir('C:\\') {}
+                    echo "teste"
             }
         }
     
