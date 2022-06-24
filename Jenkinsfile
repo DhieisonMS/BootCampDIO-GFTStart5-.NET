@@ -14,7 +14,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-               cd c
+               cd ..
+               mkdir(dir:"teste")
             }
         }
     }
