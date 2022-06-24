@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                mkdir teste
+                npm install
             }
         }
         stage('Test') {
             steps {
-                mkdir teste2
+                npm build
             }
         }
         stage('Deploy') {
             steps {
-               mkdir teste3
+               npm run
             }
         }
     }
