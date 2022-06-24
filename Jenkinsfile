@@ -1,22 +1,14 @@
 pipeline {
-    agent any
-
+    agent { label 'windows' }
     stages {
-        stage('Clean workspace') {
+        
+        stage('Test on Windows') {
             steps {
-                cleanWs()
+                dir('C:\\') {
+                    bat "mkdir teste"               
+                }
             }
         }
-        stage('Test') {
-            steps {
-                bat dotnet restore
-            }
-        }
-        stage('Deploy') {
-            steps {
-               cd ..
-               mkdir(dir:"teste")
-            }
-        }
+    
     }
 }
