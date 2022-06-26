@@ -1,5 +1,11 @@
 def deployer (CHANGESET){
-    echo "${CHANGESET}"
+    stage('teste'){
+            steps{
+                script{
+                   echo "${CHANGESET}"
+                }
+            }
+    }
     // stage('Build'){
     //         when {
     //             changeset "${CHANGESET}"
@@ -45,14 +51,9 @@ pipeline {
         //         }
         //     }
         // }
-        stage('teste'){
-            steps{
-                script{
-                  deployer("teste")
-                }
-            }
+        
               
-        }
+        deployer("teste")
 
         stage('Build2'){
             when {
