@@ -1,11 +1,13 @@
 def deployer (CHANGESET){
-    stage('teste'){
+    return(
+        stage('teste'){
             steps{
                 script{
                    echo "${CHANGESET}"
                 }
             }
-    }
+        }
+    )
     // stage('Build'){
     //         when {
     //             changeset "${CHANGESET}"
