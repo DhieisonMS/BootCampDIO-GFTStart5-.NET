@@ -8,7 +8,7 @@ namespace DUNGEON_DIO
     {
         static void Main (){
             
-            Hero batman = new Hero("Bruci", 100, 300, 0);
+            Hero batman = new Hero("Bruci", 100, 100, 0);
             ninja teste = new ninja("dhieison", 100, 100, 0);
             Wizard ellen = new Wizard("ellen",300, 1000, 1000);
 
