@@ -1,31 +1,26 @@
 pipeline {
-    
-    agent { 
-        label 'windows'
-    }
+
+    agent { label 'windows'}
 
     triggers {
         pollSCM "H/2 * * * *"
     }
 
     stages {
-        stage('Build1'){
+
+        stage('Build'){
             when {
                 changeset "**/JogoRPG/DUNGEON_DIO/*"
             }
             steps {
                 script{
-                    // bat "dotnet"
-                    dir('C:\\dotnet\\') {
                       bat "dotnet.exe build c:\\teste1\\"
-                      bat "dotnet publish c:\\teste1\\ -c Release -o c:\\ttttttttt"
-                    }
+                      bat "dotnet publish c:\\teste1\\ -c Release -o c:\\ddddddd"
                 }
             }
         }
-
             
-            stage('Build2'){
+        stage('Build2'){
             when {
                     changeset "**/JogoRPG/DUNGEON_DIO copy/*"
                  }
@@ -41,16 +36,6 @@ pipeline {
             }
             
         }
-            stage('Build'){
-            steps {
-                script{
-                    bat "dotnet restore ./JogoRPG/DUNGEON_DIO/ "
-                    // dir('C:\\dotnet\\') {
-                    //   bat "dotnet.exe restore c:\\teste1\\"  
-                    // }   
-                    // 
-                }
-             }
-           } 
+
     }
 }
