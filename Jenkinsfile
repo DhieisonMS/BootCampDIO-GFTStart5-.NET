@@ -43,8 +43,7 @@ pipeline {
                     bat "dotnet restore"
                     // dir('C:\\dotnet\\') {
                     //   bat "dotnet.exe restore c:\\teste1\\"  
-                    // }
-                    
+                    // }   
                 }
              }
            } 
