@@ -16,7 +16,7 @@ namespace DUNGEON_DIO
 
             Console.WriteLine(batman.Atack());
             Console.WriteLine(teste.Atack(10));
-            Console.WriteLine(ellen.Atack(20));
+            Console.WriteLine(ellen.Atack(30));
         }
     }
 }

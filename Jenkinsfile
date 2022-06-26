@@ -45,10 +45,13 @@ pipeline {
         //         }
         //     }
         // }
-        stage ("teste"){
-            steps:
-              script:
-                deployer("teste")
+        stage('teste'){
+            steps{
+                script{
+                  deployer("teste")
+                }
+            }
+              
         }
 
         stage('Build2'){
