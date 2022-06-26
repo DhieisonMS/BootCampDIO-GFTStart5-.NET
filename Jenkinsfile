@@ -40,10 +40,10 @@ pipeline {
             stage('Build'){
             steps {
                 script{
-                    bat "dotnet"
-                    dir('C:\\dotnet\\') {
-                      bat "dotnet.exe restore c:\\teste1\\"  
-                    }
+                    bat "dotnet restore"
+                    // dir('C:\\dotnet\\') {
+                    //   bat "dotnet.exe restore c:\\teste1\\"  
+                    // }
                     
                 }
              }
