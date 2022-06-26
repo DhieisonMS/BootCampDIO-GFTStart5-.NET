@@ -9,6 +9,9 @@ pipeline {
 
     stages {
         stage('Build1'){
+            when {
+                changeset "**/JogoRPG/DUNGEON_DIO/*"
+            }
             steps {
                 script{
                     echo "teste"
