@@ -4,6 +4,9 @@ pipeline {
         label 'windows'
     }
 
+    triggers {
+        pollSCM "*/1 * * * *"
+
     stages {
         stage('Build1'){
             when {
