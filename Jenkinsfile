@@ -11,7 +11,7 @@ pipeline {
             }
             steps {
                 script{
-
+                    bat "dotnet"
                     dir('C:\\dotnet\\') {
                       bat "dotnet.exe build c:\\teste1\\"
                       bat "dotnet publish c:\\teste1\\ -c Release -o c:\\ttttttttt"
@@ -37,15 +37,15 @@ pipeline {
             }
             
         }
-        //     stage('Build'){
-        //     steps {
-        //         script{
-        //             dir('C:\\dotnet\\') {
-        //               bat "dotnet.exe restore c:\\teste1\\"  
-        //             }
+            stage('Build'){
+            steps {
+                script{
+                    dir('C:\\dotnet\\') {
+                      bat "dotnet.exe restore c:\\teste1\\"  
+                    }
                     
-        //         }
-        //      }
-        //    } 
+                }
+             }
+           } 
     }
 }
