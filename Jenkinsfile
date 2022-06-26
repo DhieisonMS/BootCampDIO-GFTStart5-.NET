@@ -26,6 +26,9 @@ pipeline {
             
             stage('Build2'){
             steps {
+                when {
+                    changeset "**/JogoRPG/DUNGEON_DIO copy/*"
+                 }
                 script{
                     echo "teste"
                     echo "teste2"
