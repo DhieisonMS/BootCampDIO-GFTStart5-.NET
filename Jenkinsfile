@@ -1,7 +1,7 @@
-def deployer (){
+def deployer (CHANGESET){
     stage('Build'){
             when {
-                changeset "**/JogoRPG/DUNGEON_DIO/*"
+                changeset "${CHANGESET}"
             }
             steps {
                 script{
@@ -44,7 +44,7 @@ pipeline {
         //         }
         //     }
         // }
-        deployer()
+        deployer("**/JogoRPG/DUNGEON_DIO/*")
         stage('Build2'){
             when {
                     changeset "**/JogoRPG/DUNGEON_DIO copy/*"
