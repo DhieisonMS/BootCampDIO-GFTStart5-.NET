@@ -11,7 +11,6 @@ pipeline {
                       bat "dotnet.exe build c:\\teste1\\"
                       bat "dotnet publish c:\\teste1\\ -c Release -o c:\\ttttttttt"
                     echo "teste"
-                    
                     }
                     
                 }
