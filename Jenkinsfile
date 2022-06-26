@@ -22,10 +22,10 @@ pipeline {
 
             
             stage('Build2'){
-            steps {
-                when {
+            when {
                     changeset "**/JogoRPG/DUNGEON_DIO copy/*"
                  }
+            steps {
                 script{
                     echo "teste"
                     echo "teste2"
@@ -37,15 +37,15 @@ pipeline {
             }
             
         }
-            stage('Build'){
-            steps {
-                script{
-                    dir('C:\\dotnet\\') {
-                      bat "dotnet.exe restore c:\\teste1\\"  
-                    }
+        //     stage('Build'){
+        //     steps {
+        //         script{
+        //             dir('C:\\dotnet\\') {
+        //               bat "dotnet.exe restore c:\\teste1\\"  
+        //             }
                     
-                }
-             }
-           } 
+        //         }
+        //      }
+        //    } 
     }
 }
