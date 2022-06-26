@@ -40,7 +40,7 @@ pipeline {
             stage('Build'){
             steps {
                 script{
-                    bat "dotnet restore"
+                    bat "dotnet restore ./JogoRPG/DUNGEON_DIO/ "
                     // dir('C:\\dotnet\\') {
                     //   bat "dotnet.exe restore c:\\teste1\\"  
                     // }   
