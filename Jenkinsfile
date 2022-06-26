@@ -48,9 +48,9 @@ pipeline {
         stage ("teste"){
             steps:
               script:
-                deployer("**/JogoRPG/DUNGEON_DIO/*")
+                deployer("teste")
         }
-        
+
         stage('Build2'){
             when {
                     changeset "**/JogoRPG/DUNGEON_DIO copy/*"
