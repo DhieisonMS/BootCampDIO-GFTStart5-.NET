@@ -45,7 +45,12 @@ pipeline {
         //         }
         //     }
         // }
-        deployer("**/JogoRPG/DUNGEON_DIO/*")
+        stage ("teste"){
+            steps:
+              script:
+                deployer("**/JogoRPG/DUNGEON_DIO/*")
+        }
+        
         stage('Build2'){
             when {
                     changeset "**/JogoRPG/DUNGEON_DIO copy/*"
