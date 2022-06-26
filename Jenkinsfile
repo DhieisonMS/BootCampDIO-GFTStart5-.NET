@@ -1,26 +1,27 @@
 def deployer (CHANGESET){
-    stage('Build'){
-            when {
-                changeset "${CHANGESET}"
-            }
-            steps {
-                script{
-                      bat "dotnet.exe build c:\\teste1\\"
-                      bat "dotnet publish c:\\teste1\\ -c Release -o c:\\ddddddd"
-                }
-            }
-        }
-    stage('Build'){
-            when {
-                changeset "**/JogoRPG/DUNGEON_DIO/*"
-            }
-            steps {
-                script{
-                      bat "dotnet.exe build c:\\teste1\\"
-                      bat "dotnet publish c:\\teste1\\ -c Release -o c:\\ddddddd"
-                }
-            }
-        }
+    echo "${CHANGESET}"
+    // stage('Build'){
+    //         when {
+    //             changeset "${CHANGESET}"
+    //         }
+    //         steps {
+    //             script{
+    //                   bat "dotnet.exe build c:\\teste1\\"
+    //                   bat "dotnet publish c:\\teste1\\ -c Release -o c:\\ddddddd"
+    //             }
+    //         }
+    //     }
+    // stage('Build'){
+    //         when {
+    //             changeset "**/JogoRPG/DUNGEON_DIO/*"
+    //         }
+    //         steps {
+    //             script{
+    //                   bat "dotnet.exe build c:\\teste1\\"
+    //                   bat "dotnet publish c:\\teste1\\ -c Release -o c:\\ddddddd"
+    //             }
+    //         }
+    //     }
 }
 
 pipeline {
