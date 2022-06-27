@@ -10,7 +10,7 @@ namespace DUNGEON_DIO
             
             Hero batman = new Hero("Bruci", 100, 100, 0);
             ninja teste = new ninja("dhieison", 100, 100, 0);
-            Wizard ellen = new Wizard("ellen",500, 1000, 1000);
+            Wizard ellen = new Wizard("ellen",5000, 1000, 1000);
 
             Console.WriteLine(batman);
 
