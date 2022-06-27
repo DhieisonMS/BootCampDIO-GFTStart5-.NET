@@ -3,12 +3,12 @@ pipeline {
     agent { label 'windows'}
 
     triggers {
-        pollSCM "H/2 * * * *"
+        pollSCM "*/1 * * * *"
     }
 
     stages {
 
-        stage('Build'){
+        stage('Build1'){
             when {
                 changeset "**/JogoRPG/DUNGEON_DIO/*"
             }
