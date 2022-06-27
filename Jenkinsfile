@@ -3,7 +3,7 @@ pipeline {
     agent { label 'windows'}
 
     triggers {
-        pollSCM "H/1 * * * *"
+        pollSCM "M/1 * * * *"
     }
 
     stages {
