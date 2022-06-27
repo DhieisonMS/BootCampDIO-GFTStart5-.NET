@@ -10,9 +10,10 @@ pipeline {
         stage('checkout'){
             git scm
         }
+        
         stage('Build/Deploy') {
             parallel {
-
+// =============================================================================================
                 stage('app1'){
                     when {
                         changeset "**/JogoRPG/DUNGEON_DIO/*"
@@ -24,7 +25,7 @@ pipeline {
                         }
                     }
                 }
-            
+// ============================================================================================= 
                 stage('app2'){
                     when {
                             changeset "**/JogoRPG/DUNGEON_DIO copy/*"
