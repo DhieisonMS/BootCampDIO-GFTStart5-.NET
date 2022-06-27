@@ -7,10 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('checkout'){
-            git scm
-        }
-        
+
         stage('Build/Deploy') {
             parallel {
 // =============================================================================================
