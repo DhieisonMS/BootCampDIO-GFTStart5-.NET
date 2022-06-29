@@ -1,6 +1,6 @@
 pipeline {
 
-    agent { label 'windows'}
+    agent { label 'servidor_plss'}
 
     triggers {
         githubPush()
