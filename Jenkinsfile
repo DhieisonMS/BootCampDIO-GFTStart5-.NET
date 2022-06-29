@@ -3,7 +3,7 @@ pipeline {
     agent { label 'windows'}
 
     triggers {
-        pollSCM "*/1 * * * *"
+        githubPush()
     }
 
     stages {
