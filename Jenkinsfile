@@ -11,11 +11,11 @@ pipeline {
     
     stages {
       
-        stage(' valida branch ') {
+        stage('valida branch') {
             when {
                  branch 'main'
             }
-            steos{
+            steps{
                 script{
                     env.teste="123"
                     echo ${env.teste}
