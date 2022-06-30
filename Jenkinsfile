@@ -18,7 +18,7 @@ pipeline {
             steps{
                 script{
                     env.teste="123"
-                    echo ${env.teste}
+                    echo "${env.teste}"
                 }
             }
         }
