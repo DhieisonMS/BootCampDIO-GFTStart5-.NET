@@ -10,10 +10,16 @@ pipeline {
     }
     
     stages {
-       
-        if (env.BRANCH_NAME == "main") {
-            stage('Docker') {
-                 echo "ok"
+      
+        stage(' valida branch ') {
+            when {
+                 branch 'main'
+            }
+            steos{
+                script{
+                    env.teste="123"
+                    echo ${env.teste}
+                }
             }
         }
         
