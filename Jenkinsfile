@@ -2,9 +2,9 @@ pipeline {
 
     agent { label 'servidor_plss'}
 
-    triggers {
-        githubPush()
-    }
+//     triggers {
+//         githubPush()
+//     }
 
     stages {
 
