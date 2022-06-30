@@ -10,6 +10,14 @@ pipeline {
     }
     
     stages {
+       
+        if (env.BRANCH_NAME == "main") {
+            stage('Docker') {
+                 echo "ok"
+            }
+        }
+        
+        }
         
         stage('Build'){
             when {
