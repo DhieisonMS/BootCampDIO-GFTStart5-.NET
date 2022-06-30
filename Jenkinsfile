@@ -3,7 +3,22 @@ pipeline {
     agent { label 'servidor_plss'}
     triggers {
         GenericTrigger(
-            token: "teste"
+             genericVariables: [
+              [key: 'ref', value: '$.ref']
+             ],
+
+             causeString: 'Triggered on $ref',
+
+             token: 'abc123',
+             tokenCredentialId: '',
+
+             printContributedVariables: true,
+             printPostContent: true,
+
+             silentResponse: false,
+
+             regexpFilterText: '$ref',
+             regexpFilterExpression: 'refs/heads/'
         )
     }
     stages {
