@@ -17,6 +17,7 @@ pipeline {
             }
             steps{
                 script{
+                    bat "msbuild /version"
                     env.teste="123"
                     echo "${env.teste}"
                 }
