@@ -1,11 +1,11 @@
 pipeline {
 
     agent { label 'servidor_plss'}
-
-//     triggers {
-//         githubPush()
-//     }
-
+    triggers {
+        GenericTrigger(
+            token: "teste"
+        )
+    }
     stages {
         
         stage('Build'){
