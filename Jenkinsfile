@@ -7,16 +7,7 @@ pipeline {
 //     }
 
     stages {
-        stage ('webhook'){
-            steps{
-                script{
-                    hook = registerWebhook()
-                    echo "Waiting for POST to ${hook.url}"
-                    data = waitForWebhook hook
-                    echo "Webhook called with data: ${data}"
-                }
-            }
-        }
+        
         stage('Build'){
             when {
                 changeset "**/JogoRPG/DUNGEON_DIO/*"
